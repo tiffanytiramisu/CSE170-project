@@ -3,32 +3,63 @@
 		{
 			"word": "abate",
 			"definition": "lessen",
-			"definitionC": "缓和"			
+			"definitionC": "缓和",
+			"id":"1"			
 		},
 		{
 			"word": "aberration",
 			"definition": "deviation, not normal",
-			"definitionC": "不正常"	
+			"definitionC": "不正常",
+			"id":"2"	
 		},
 		{
 			"word": "abhor",
 			"definition": "hatred",
-			"definitionC": "憎恶的"	
+			"definitionC": "憎恶的",
+			"id":"3"	
 		},
 		{
 			"word": "abtruse",
 			"definition": "difficult to understand",
-			"definitionC": "难以理解的"		
+			"definitionC": "难以理解的",
+			"id":"4"		
 		},
 		{
 			"word": "accost",
 			"definition": "confront",
-			"definitionC": "面对"
+			"definitionC": "面对",
+			"id":"5"
 		},
 		{
 			"word": "acrimony",
 			"definition": "bitter animosity",
-			"definitionC": "尖酸的"
+			"definitionC": "尖酸的",
+			"id":"6"
+		}
+	],
+	"WrongVocabs": [
+		{
+			"word": "beautiful"		
+		},
+		{
+			"word": "happy"
+		},
+		{
+			"word": "correct"
+		},
+		{
+			"word": "pursuasive"	
+		},
+		{
+			"word": "dangerous"
+		},
+		{
+			"word": "nice"
+		}
+	],
+	"ListData": [
+		{
+			"size":"6"
 		}
 	]
 }

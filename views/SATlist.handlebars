@@ -10,7 +10,7 @@
 </head>
   <body>
 	<div class="ui menu">
-	  <a class="item">
+	  <a class="item" href=/>
 	    Home
 	  </a>
 	  <div class="ui pointing dropdown link item">
@@ -41,18 +41,41 @@
 	    </div>
 	  </div>
 	  <a class="item">
-	    Contact Us
+	    Tutorial
 	  </a>
 	</div>
 
 
-    {{#each SATvocabs}}
-      <h5>{{word}}</h5>
-    {{/each}}
+	<table class="ui celled striped table">
+	  <thead>
+	    <tr>
+	    	<th>Word</th>
+	    	<th>Definition</th>
+	    	<th>Chinese Definition</th>
+	    	<th>Star</th>
+	  	</tr></thead>
+	  <tbody>
+	    {{#each SATvocabs}}
+      	<tr>
+      	<td>{{word}}</td>
+      	<td>{{definition}}</td>
+      	<td>{{definitionC}}</td>
+      	<td><div class="ui rating" data-max-rating="1"></div></td>
+      	</tr>
+    	{{/each}}
+	  </tbody>
+	  <tfoot></tfoot>
+	</table>
+
 
 
 	<script type="text/javascript">
 		$('.ui.pointing.dropdown.link.item').dropdown();
+		$('.ui.rating')
+  		.rating({
+    		initialRating: 0,
+    		maxRating: 1
+  		});
 	</script>
   </body>
 </html>

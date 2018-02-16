@@ -1,0 +1,128 @@
+<html>
+<head>
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="semantic/dist/semantic.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+  <body>
+	<div class="ui menu">
+	  <a class="item" href=/>
+	    Home
+	  </a>
+	  <div class="ui pointing dropdown link item">
+	    <span class="text">Account</span>
+	    <i class="dropdown icon"></i>
+	    <div class="menu">
+	      <div class="item">
+	        <i class="dropdown icon"></i>
+	        <span class="text">Quick Link</span>
+	        <div class="menu">
+	          <div class="header">Study List</div>
+	          <a href=SATlist><div class="item">SAT</div></a>
+	          <div class="item">GRE</div>
+	          <div class="item">CASUAL</div>
+	          <div class="item">READING</div>
+	          <div class="divider"></div>
+	          <div class="header">Star List</div>
+	          <div class="item">SAT</div>
+	          <div class="item">GRE</div>
+	          <div class="item">HARD</div>
+	        </div>
+	      </div>
+	      <div class="item">Friends</div>
+	      <div class="item">What's New</div>
+	      <div class="divider"></div>
+	      <div class="item">Account Info</div>
+	      <div class="item">Log out</div>
+	    </div>
+	  </div>
+	  <a class="item">
+	    Tutorial
+	  </a>
+	</div>
+
+<!-- 	<div class="multiple modal">
+	{{#each SATvocabs}}
+		<div class="modal" id={{id}}>
+  			<div class="header">Question {{id}}</div>
+  			<div class="content">
+    			<h1>Select meaning of word: {{word}}</h1>
+  			</div>
+  			<button class="ui button">next</button>
+		</div>
+	{{/each}}
+	
+
+		<div class="modal" id=0>
+  			<div class="header">Study Session Completed!</div>
+  			<div class="content">
+    			<h1>Your Score: </h1>
+  			</div>
+  			<button class="ui button">next</button>
+		</div>
+
+	</div> -->
+	<div class="ui modal" id=0>
+	  <i class="close icon"></i>
+	  <div class="header">
+	    Study Session Complete
+	  </div>
+	  <div class="image content">
+	    <div class="description">
+	    <p>You just complete your study session, your score is <h3>6/6</h3>!</p>
+	      
+	    </div>
+	  </div>
+	  <div class="actions">
+	  	<a href=Study>
+	    	<div class="ui black deny button">
+	    	  return to study menu
+	    	</div>
+		</a>
+		<a href=SATlist>
+	    	<div class="ui positive right labeled icon button">
+	    	  review list
+	    	  <i class="checkmark icon"></i>
+	    	</div>
+	    </a>
+	  </div>
+	</div>
+
+	{{#each SATvocabs}}
+	<div class="ui modal" id={{id}}>
+	  <i class="close icon"></i>
+	  <div class="header">
+	    {{id}} questions left:
+	  </div>
+	  <div class="image content">
+	    <div class="description">
+	    <p>Choose the correct definition of the word: <h3>{{word}}</h3></p>
+	      
+	    </div>
+	  </div>
+	  <div class="actions">
+	    <div class="ui black deny button">
+	      Nope
+	    </div>
+	    <div class="ui positive right labeled icon button">
+	      Next
+	      <i class="checkmark icon"></i>
+	    </div>
+	  </div>
+	</div>
+	{{/each}}
+
+
+
+
+	<script type="text/javascript">
+		$('.ui.pointing.dropdown.link.item').dropdown();
+
+		$('.ui.modal').modal('show');
+	</script>
+  </body>
+</html>
