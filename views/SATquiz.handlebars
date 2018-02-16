@@ -24,24 +24,20 @@
 	          <div class="header">Study List</div>
 	          <a href=SATlist><div class="item">SAT</div></a>
 	          <div class="item">GRE</div>
-	          <div class="item">CASUAL</div>
-	          <div class="item">READING</div>
+	          <div class="item">IELTS</div>
+	          <div class="item">TOEFL</div>
 	          <div class="divider"></div>
 	          <div class="header">Star List</div>
-	          <div class="item">SAT</div>
-	          <div class="item">GRE</div>
-	          <div class="item">HARD</div>
 	        </div>
 	      </div>
-	      <div class="item">Friends</div>
-	      <div class="item">What's New</div>
-	      <div class="divider"></div>
-	      <div class="item">Account Info</div>
 	      <div class="item">Log out</div>
 	    </div>
 	  </div>
-	  <a class="item">
+	  <a class="item" href=tutorial>
 	    Tutorial
+	  </a>
+	  <a class="item" href=reminder>
+	    Study Reminder
 	  </a>
 	</div>
 
@@ -107,7 +103,7 @@
 			    <div class="field">
 			      <div class="ui radio checkbox">
 			        <input type="radio" name="fruit" checked="" tabindex="0" class="hidden">
-			        <label>Apples</label>
+			        <label>{{definition}}</label>
 			      </div>
 			    </div>
 			    <div class="field">
@@ -153,9 +149,7 @@
 		//radio check box for quiz choices
 		$('.ui.radio.checkbox').checkbox();
 		//animation for quiz slides
-		$('.ui.modal').modal('show');
-		var wrongvocabs=JSON.parse({{{WrongVocabs.word}}});
-		console.log(wrongvocabs);
+		$('.ui.modal').modal('setting', 'closable', false).modal('show');
 	</script>
   </body>
 </html>

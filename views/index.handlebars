@@ -26,24 +26,20 @@
 	          <div class="header">Study List</div>
 	          <a href=SATlist><div class="item">SAT</div></a>
 	          <div class="item">GRE</div>
-	          <div class="item">CASUAL</div>
-	          <div class="item">READING</div>
+	          <div class="item">IELTS</div>
+	          <div class="item">TOEFL</div>
 	          <div class="divider"></div>
 	          <div class="header">Star List</div>
-	          <div class="item">SAT</div>
-	          <div class="item">GRE</div>
-	          <div class="item">HARD</div>
 	        </div>
 	      </div>
-	      <div class="item">Friends</div>
-	      <div class="item">What's New</div>
-	      <div class="divider"></div>
-	      <div class="item">Account Info</div>
 	      <div class="item">Log out</div>
 	    </div>
 	  </div>
-	  <a class="item">
+	  <a class="item" href=tutorial>
 	    Tutorial
+	  </a>
+	  <a class="item" href=reminder>
+	    Study Reminder
 	  </a>
 	</div>
 
@@ -84,10 +80,42 @@
 		</div>
 	</div>
 
+	<div class="ui modal" id="login">
+	  <div class="header">
+	    Log In:
+	  </div>
+	  <div class="image content">
+	    <div class="description">	       
+			<form class="ui form">
+			  <div class="field">
+			    <label>User Name</label>
+			    <input type="text" name="first-name" placeholder="First Name">
+			  </div>
+			  <div class="field">
+			    <label>Password</label>
+			    <input type="text" name="last-name" placeholder="Last Name">
+			  </div>
+			</form>
+	    </div>
+	  </div>
+	  <div class="actions">
+	    	<div class="ui black deny button">
+	    	  Guest Session
+	    	</div>
+	    	<div class="ui positive right labeled icon button" i="login">
+	    	  Log In
+	    	  <i class="checkmark icon"></i>
+	    	</div>
+	    <br />
+	  </div>
+	</div>
+
 
 	<script type="text/javascript">
+		var login_status = false;
 		$('.ui.pointing.dropdown.link.item').dropdown();
-
+		//login
+		$('.ui.modal').modal('setting', 'closable', false).modal('show');
 	</script>
 
 </body>

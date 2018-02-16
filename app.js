@@ -13,6 +13,8 @@ var SATlist = require('./routes/SATlist');
 var SATquiz = require('./routes/SATquiz');
 var study = require('./routes/study');
 var manage = require('./routes/manage');
+var tutorial = require('./routes/tutorial');
+var reminder = require('./routes/reminder');
 // Example route
 // var user = require('./routes/user');
 
@@ -44,6 +46,8 @@ app.get('/SATlist', SATlist.view);
 app.get('/SATquiz',SATquiz.view);
 app.get('/study',study.view);
 app.get('/manage',manage.view);
+app.get('/tutorial',tutorial.view);
+app.get('/reminder',reminder.view);
 
 // Example route
 // app.get('/users', user.list);

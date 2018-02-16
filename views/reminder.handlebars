@@ -1,0 +1,234 @@
+<html>
+<head>
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="semantic/dist/semantic.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+	<div class="ui menu">
+	  <a class="item" href=/>
+	    Home
+	  </a>
+	  <div class="ui pointing dropdown link item">
+	    <span class="text">Account</span>
+	    <i class="dropdown icon"></i>
+	    <div class="menu">
+	      <div class="item">
+	        <i class="dropdown icon"></i>
+	        <span class="text">Quick Link</span>
+	        <div class="menu">
+	          <div class="header">Study List</div>
+	          <a href=SATlist><div class="item">SAT</div></a>
+	          <div class="item">GRE</div>
+	          <div class="item">IELTS</div>
+	          <div class="item">TOEFL</div>
+	          <div class="divider"></div>
+	          <div class="header">Star List</div>
+	        </div>
+	      </div>
+	      <div class="item">Log out</div>
+	    </div>
+	  </div>
+	  <a class="item" href=tutorial>
+	    Tutorial
+	  </a>
+	  <a class="item" href=reminder>
+	    Study Reminder
+	  </a>
+	</div>
+
+	<table class="ui celled unstackable table">
+	  <thead>
+	    <tr><th>Reminder Settings</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>
+			<div class="ui toggle checkbox">
+			  <input type="checkbox" name="public">
+			  <label>Reminder OFF/ON</label>
+			</div>
+	      </td>
+	    </tr>
+	    <tr>
+	    	<td>
+	    		<form class="ui form">
+				  <div class="field">
+				  	<label>Pick reminder time</label>
+				    <div class="fields">
+				      <div class="four wide field">
+				        <input type="text" name="hour" placeholder="HH">
+				      </div>
+				      <div class="four wide field">
+				        <input type="text" name="minute" placeholder="MM">
+				      </div>
+				    </div>
+				  </div>
+				</form>
+	    	</td>
+	    </tr>
+	    <tr>
+	      <td>
+			<div class="ui celled relaxed list">
+			  <div class="item">
+			    <div class="ui master checkbox">
+			      <input type="checkbox" name="Days">
+			      <label>Days</label>
+			    </div>
+			    <div class="list">
+			      <div class="item">
+			        <div class="ui child checkbox">
+			          <input type="checkbox" name="Monday">
+			          <label>Monday</label>
+			        </div>
+			      </div>
+			      <div class="item">
+			        <div class="ui child checkbox">
+			          <input type="checkbox" name="Tuesday">
+			          <label>Tuesday</label>
+			        </div>
+			      </div>
+			      <div class="item">
+			        <div class="ui child checkbox">
+			          <input type="checkbox" name="Wednesday">
+			          <label>Wednesday</label>
+			        </div>
+			      </div>
+			      <div class="item">
+			        <div class="ui child checkbox">
+			          <input type="checkbox" name="Thursday">
+			          <label>Thursday</label>
+			        </div>
+			      </div>
+			      <div class="item">
+			        <div class="ui child checkbox">
+			          <input type="checkbox" name="Friday">
+			          <label>Friday</label>
+			        </div>
+			      </div>
+			      <div class="item">
+			        <div class="ui child checkbox">
+			          <input type="checkbox" name="Saturday">
+			          <label>Saturday</label>
+			        </div>
+			      </div>
+			      <div class="item">
+			        <div class="ui child checkbox">
+			          <input type="checkbox" name="Sunday">
+			          <label>Sunday</label>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="item">
+			    <div class="ui master checkbox">
+			      <input type="checkbox" name="Method">
+			      <label>Method</label>
+			    </div>
+			    <div class="list">
+			      <div class="item">
+			        <div class="ui child checkbox">
+			          <input type="checkbox" name="Alarm">
+			          <label>Alarm</label>
+			        </div>
+			      </div>
+			      <div class="item">
+			        <div class="ui child checkbox">
+			          <input type="checkbox" name="Message">
+			          <label>Text Message</label>
+			        </div>
+			      </div>
+			      <div class="item">
+			        <div class="ui child checkbox">
+			          <input type="checkbox" name="Email">
+			          <label>Email</label>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+	      </td>
+	    </tr>
+	    <tr>
+	    	<td>
+
+	    	</td>
+	    </tr>
+	  </tbody>
+	  <tfoot>
+	    <tr>
+	    	<td>
+	    	<button class="ui toggle button">Save</button>
+	    </td>
+	  </tr></tfoot>
+	</table>
+
+	<script type="text/javascript">
+		$('.ui.pointing.dropdown.link.item').dropdown();
+		//master check box
+		$('.list .master.checkbox')
+		  .checkbox({
+		    // check all children
+		    onChecked: function() {
+		      var
+		        $childCheckbox  = $(this).closest('.checkbox').siblings('.list').find('.checkbox')
+		      ;
+		      $childCheckbox.checkbox('check');
+		    },
+		    // uncheck all children
+		    onUnchecked: function() {
+		      var
+		        $childCheckbox  = $(this).closest('.checkbox').siblings('.list').find('.checkbox')
+		      ;
+		      $childCheckbox.checkbox('uncheck');
+		    }
+		  })
+		;
+		//child check box
+		$('.list .child.checkbox')
+		  .checkbox({
+		    // Fire on load to set parent value
+		    fireOnInit : true,
+		    // Change parent state on each child checkbox change
+		    onChange   : function() {
+		      var
+		        $listGroup      = $(this).closest('.list'),
+		        $parentCheckbox = $listGroup.closest('.item').children('.checkbox'),
+		        $checkbox       = $listGroup.find('.checkbox'),
+		        allChecked      = true,
+		        allUnchecked    = true
+		      ;
+		      // check to see if all other siblings are checked or unchecked
+		      $checkbox.each(function() {
+		        if( $(this).checkbox('is checked') ) {
+		          allUnchecked = false;
+		        }
+		        else {
+		          allChecked = false;
+		        }
+		      });
+		      // set parent checkbox state, but dont trigger its onChange callback
+		      if(allChecked) {
+		        $parentCheckbox.checkbox('set checked');
+		      }
+		      else if(allUnchecked) {
+		        $parentCheckbox.checkbox('set unchecked');
+		      }
+		      else {
+		        $parentCheckbox.checkbox('set indeterminate');
+		      }
+		    }
+		  })
+		;
+		//save button
+		$('.ui.toggle.button').state();
+	</script>
+
+</body>
+</html>

@@ -8,7 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-  <body>
+
+<body>
+
 	<div class="ui menu">
 	  <a class="item" href=/>
 	    Home
@@ -41,37 +43,24 @@
 	  </a>
 	</div>
 
-
-	<table class="ui celled unstackable table">
-	  <thead>
-	    <tr>
-	    	<th>Word</th>
-	    	<th>Definition</th>
-	    	<th>Chinese Definition</th>
-	    	<th>Star</th>
-	  	</tr></thead>
-	  <tbody>
-	    {{#each SATvocabs}}
-      	<tr>
-      	<td>{{word}}</td>
-      	<td>{{definition}}</td>
-      	<td>{{definitionC}}</td>
-      	<td><div class="ui rating" data-max-rating="1"></div></td>
-      	</tr>
-    	{{/each}}
-	  </tbody>
-	  <tfoot></tfoot>
-	</table>
-
+	<div class="ui segment">
+		<p>dummy 1</p>
+	</div>
+	<div class="ui segment">
+		<p>dummy 2</p>
+	</div>
+	<div class="ui segment">
+		<p>dummy 3</p>
+	</div>
+	<div class="ui segment">
+		<p>Come on, you are college student. Figure it out.</p>
+	</div>
 
 
 	<script type="text/javascript">
+		var login_status = false;
 		$('.ui.pointing.dropdown.link.item').dropdown();
-		$('.ui.rating')
-  		.rating({
-    		initialRating: 0,
-    		maxRating: 1
-  		});
 	</script>
-  </body>
+
+</body>
 </html>
