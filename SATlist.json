@@ -1,0 +1,34 @@
+{
+	"SATvocabs": [
+		{
+			"word": "abate",
+			"definition": "lessen",
+			"definitionC": "缓和"			
+		},
+		{
+			"word": "aberration",
+			"definition": "deviation, not normal",
+			"definitionC": "不正常"	
+		},
+		{
+			"word": "abhor",
+			"definition": "hatred",
+			"definitionC": "憎恶的"	
+		},
+		{
+			"word": "abtruse",
+			"definition": "difficult to understand",
+			"definitionC": "难以理解的"		
+		},
+		{
+			"word": "accost",
+			"definition": "confront",
+			"definitionC": "面对"
+		},
+		{
+			"word": "acrimony",
+			"definition": "bitter animosity",
+			"definitionC": "尖酸的"
+		}
+	]
+}

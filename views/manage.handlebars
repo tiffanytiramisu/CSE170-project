@@ -1,0 +1,112 @@
+<html>
+<head>
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="semantic/dist/semantic.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="ui menu">
+	  <a class="item">
+	    Home
+	  </a>
+	  <div class="ui pointing dropdown link item">
+	    <span class="text">Account</span>
+	    <i class="dropdown icon"></i>
+	    <div class="menu">
+	      <div class="item">
+	        <i class="dropdown icon"></i>
+	        <span class="text">Quick Link</span>
+	        <div class="menu">
+	          <div class="header">Study List</div>
+	          <a href=SATlist><div class="item">SAT</div></a>
+	          <div class="item">GRE</div>
+	          <div class="item">CASUAL</div>
+	          <div class="item">READING</div>
+	          <div class="divider"></div>
+	          <div class="header">Star List</div>
+	          <div class="item">SAT</div>
+	          <div class="item">GRE</div>
+	          <div class="item">HARD</div>
+	        </div>
+	      </div>
+	      <div class="item">Friends</div>
+	      <div class="item">What's New</div>
+	      <div class="divider"></div>
+	      <div class="item">Account Info</div>
+	      <div class="item">Log out</div>
+	    </div>
+	  </div>
+	  <a class="item">
+	    Contact Us
+	  </a>
+	</div>
+
+	<div class="ui center aligned one column grid">
+	  <div class="row">
+	    <div class="column">
+	        <div class="header item">
+	          <h1>Study</h1>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui center aligned two row grid">
+		<div class="center aligned one column row">
+			<div class="center aligned fifteen wide column">
+				<h2 class="ui center aligned icon header">
+					<div class="ui segment">
+						<a href=SATlist>
+  							<i class="book icon">SAT</i>
+  						</a>
+  					</div>
+				</h2>
+			</div>
+		</div>
+		<div class="center aligned one column row">
+			<div class="center aligned fifteen wide column">
+				<h2 class="ui center aligned icon header">
+					<div class="ui segment">
+						<a href=Manage>
+  							<i class="book icon">GRE</i>
+  						</a>
+  					</div>
+				</h2>
+			</div>
+		</div>
+		<div class="center aligned one column row">
+			<div class="center aligned fifteen wide column">
+				<h2 class="ui center aligned icon header">
+					<div class="ui segment">
+						<a href=Manage>
+  							<i class="book icon">CASUAL</i>
+  						</a>
+  					</div>
+				</h2>
+			</div>
+		</div>
+		<div class="center aligned one column row">
+			<div class="center aligned fifteen wide column">
+				<h2 class="ui center aligned icon header">
+					<div class="ui segment">
+						<a href=Manage>
+  							<i class="book icon">READING</i>
+  						</a>
+  					</div>
+				</h2>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('.ui.pointing.dropdown.link.item').dropdown();
+
+	</script>
+
+
+</body>
+
+</html>

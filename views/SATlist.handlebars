@@ -8,9 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-<body>
-
+  <body>
 	<div class="ui menu">
 	  <a class="item">
 	    Home
@@ -24,7 +22,7 @@
 	        <span class="text">Quick Link</span>
 	        <div class="menu">
 	          <div class="header">Study List</div>
-	          <div class="item">SAT</div>
+	          <a href=SATlist><div class="item">SAT</div></a>
 	          <div class="item">GRE</div>
 	          <div class="item">CASUAL</div>
 	          <div class="item">READING</div>
@@ -47,48 +45,14 @@
 	  </a>
 	</div>
 
-	<div class="ui center aligned one column grid">
-	  <div class="row">
-	    <div class="column">
-	        <div class="header item">
-	          <h1>VocaBuddy</h1>
-	        </div>
-	    </div>
-	  </div>
-	</div>
-	<br /><br /><br /><br />
-	<div class="ui center aligned two row grid">
-		<div class="row">
-			<div class="left floated right floated six wide column">
-				<h2 class="ui center aligned icon header">
-					<div class="ui segment">
-						<a href=Study.html>
-  							<i class="trophy icon"></i>
-  							Study Mode
-  						</a>
-  					</div>
-				</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="left floated right floated six wide column">
-				<h2 class="ui center aligned icon header">
-					<div class="ui segment">
-						<a href=Manage.html>
-  							<i class="edit icon"></i>
-  							Manage Mode
-  						</a>
-  					</div>
-				</h2>
-			</div>
-		</div>
-	</div>
+
+    {{#each SATvocabs}}
+      <h5>{{word}}</h5>
+    {{/each}}
 
 
 	<script type="text/javascript">
 		$('.ui.pointing.dropdown.link.item').dropdown();
-
 	</script>
-
-</body>
+  </body>
 </html>

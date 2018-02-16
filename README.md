@@ -1,2 +1,4 @@
-# CSE170-project
-Project for CSE170 UCSD 2018
+lab4
+====
+
+Lab 4: Programming with Javascript
