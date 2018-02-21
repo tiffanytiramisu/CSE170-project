@@ -1,141 +1,141 @@
 {
-	"SATvocabs": [
+	"MCATvocabs": [
 		{
-			"word": "abhor",
-			"definition": "hate",
+			"word": "aback",
+			"definition": "unexpected",
 			"definitionC": "",
 			"id":"1",
 			"star":"0"
 		},
 		{
-			"word": "bigot",
-			"definition": "narrow-minded",
+			"word": "abase",
+			"definition": "degrade",
 			"definitionC": "",
 			"id":"2",
-			"star":"0"	
+			"star":"0"
 		},
 		{
-			"word": "counterfeit",
-			"definition": "fake",
+			"word": "abet",
+			"definition": "aid",
 			"definitionC": "",
 			"id":"3",
-			"star":"0"	
+			"star":"0"
 		},
 		{
-			"word": "hamper",
-			"definition": "hinder",
+			"word": "wretched",
+			"definition": "miserable",
 			"definitionC": "",
 			"id":"4",
-			"star":"0"		
+			"star":"0"
 		},
 		{
-			"word": "noxious",
-			"definition": "poisonous",
+			"word": "addle",
+			"definition": "confuse",
 			"definitionC": "",
 			"id":"5",
 			"star":"0"
 		},
 		{
-			"word": "placid",
-			"definition": "calm",
+			"word": "renounce",
+			"definition": "give up",
 			"definitionC": "",
 			"id":"6",
 			"star":"0"
-		}
+		},
 		{
-			"word": "abrasive",
-			"definition": "rough",
+			"word": "tribute",
+			"definition": "praise",
 			"definitionC": "",
 			"id":"7",
 			"star":"0"
 		},
 		{
-			"word": "covert",
-			"definition": "undercover",
+			"word": "concrete",
+			"definition": "tangible",
 			"definitionC": "",
 			"id":"8",
+			"star":"0"
+		},
+		{
+			"word": "chasm",
+			"definition": "hole",
+			"definitionC": "",
+			"id":"9",
+			"star":"0"
+		},
+		{
+			"word": "mitigate",
+			"definition": "assuage",
+			"definitionC": "",
+			"id":"10",
+			"star":"0"
+		},
+		{
+			"word": "derision",
+			"definition": "ridicule",
+			"definitionC": "",
+			"id":"11",
+			"star":"0"
+		},
+		{
+			"word": "interpose",
+			"definition": "interrupt",
+			"definitionC": "",
+			"id":"12",
+			"star":"0"
+		},
+		{
+			"word": "spurious",
+			"definition": "false",
+			"definitionC": "",
+			"id":"13",
 			"star":"0"
 		},
 		{
 			"word": "bilk",
 			"definition": "cheat",
 			"definitionC": "",
-			"id":"9",
-			"star":"0"
-		},
-		{
-			"word": "engender",
-			"definition": "cause",
-			"definitionC": "",
-			"id":"10",
-			"star":"0"
-		},
-		{
-			"word": "knotty",
-			"definition": "complex",
-			"definitionC": "",
-			"id":"11",
-			"star":"0"
-		},
-		{
-			"word": "renown",
-			"definition": "fame",
-			"definitionC": "",
-			"id":"12",
-			"star":"0"
-		},
-		{
-			"word": "abasement",
-			"definition": "humiliation",
-			"definitionC": "",
-			"id":"13",
-			"star":"0"
-		},
-		{
-			"word": "replete",
-			"definition": "full",
-			"definitionC": "",
 			"id":"14",
 			"star":"0"
 		},
 		{
-			"word": "enhance",
-			"definition": "improve",
+			"word": "levity",
+			"definition": "casual",
 			"definitionC": "",
 			"id":"15",
 			"star":"0"
 		},
 		{
-			"word": "enigma",
-			"definition": "puzzle",
+			"word": "castigate",
+			"definition": "reprimand",
 			"definitionC": "",
 			"id":"16",
 			"star":"0"
 		},
 		{
-			"word": "affable",
-			"definition": "friendly",
+			"word": "mendacious",
+			"definition": "dishonest",
 			"definitionC": "",
 			"id":"17",
 			"star":"0"
 		},
 		{
-			"word": "tardy",
-			"definition": "late",
+			"word": "blithe",
+			"definition": "happy",
 			"definitionC": "",
 			"id":"18",
 			"star":"0"
 		},
 		{
-			"word": "reprehensible",
-			"definition": "shameful",
+			"word": "billow",
+			"definition": "surging",
 			"definitionC": "",
 			"id":"19",
 			"star":"0"
 		},
 		{
-			"word": "obdurate",
-			"definition": "stubborn",
+			"word": "wry",
+			"definition": "mocking",
 			"definitionC": "",
 			"id":"20",
 			"star":"0"
