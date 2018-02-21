@@ -1,141 +1,141 @@
 {
-	"SATvocabs": [
+	"LSATvocabs": [
 		{
-			"word": "abhor",
-			"definition": "hate",
+			"word": "infer",
+			"definition": "deduce",
 			"definitionC": "",
 			"id":"1",
 			"star":"0"
 		},
 		{
-			"word": "bigot",
-			"definition": "narrow-minded",
+			"word": "undermines",
+			"definition": "weakens",
 			"definitionC": "",
 			"id":"2",
-			"star":"0"	
+			"star":"0"
 		},
 		{
-			"word": "counterfeit",
-			"definition": "fake",
+			"word": "framework",
+			"definition": "structure",
 			"definitionC": "",
 			"id":"3",
-			"star":"0"	
+			"star":"0"
 		},
 		{
-			"word": "hamper",
-			"definition": "hinder",
+			"word": "invariably",
+			"definition": "always",
 			"definitionC": "",
 			"id":"4",
-			"star":"0"		
+			"star":"0"
 		},
 		{
-			"word": "noxious",
-			"definition": "poisonous",
+			"word": "indigenous",
+			"definition": "native",
 			"definitionC": "",
 			"id":"5",
 			"star":"0"
 		},
 		{
-			"word": "placid",
-			"definition": "calm",
+			"word": "anomalous",
+			"definition": "irregular",
 			"definitionC": "",
 			"id":"6",
 			"star":"0"
-		}
+		},
 		{
-			"word": "abrasive",
-			"definition": "rough",
+			"word": "alleviate",
+			"definition": "better",
 			"definitionC": "",
 			"id":"7",
 			"star":"0"
 		},
 		{
-			"word": "covert",
-			"definition": "undercover",
+			"word": "ephemeral",
+			"definition": "fleeting",
 			"definitionC": "",
 			"id":"8",
 			"star":"0"
 		},
 		{
-			"word": "bilk",
-			"definition": "cheat",
+			"word": "corroborate",
+			"definition": "confirm",
 			"definitionC": "",
 			"id":"9",
 			"star":"0"
 		},
 		{
-			"word": "engender",
-			"definition": "cause",
+			"word": "implicit",
+			"definition": "implied",
 			"definitionC": "",
 			"id":"10",
 			"star":"0"
 		},
 		{
-			"word": "knotty",
-			"definition": "complex",
+			"word": "feign",
+			"definition": "pretend",
 			"definitionC": "",
 			"id":"11",
 			"star":"0"
 		},
 		{
-			"word": "renown",
-			"definition": "fame",
+			"word": "equivocation",
+			"definition": "ambiguity",
 			"definitionC": "",
 			"id":"12",
 			"star":"0"
 		},
 		{
-			"word": "abasement",
-			"definition": "humiliation",
+			"word": "evaluate",
+			"definition": "judge",
 			"definitionC": "",
 			"id":"13",
 			"star":"0"
 		},
 		{
-			"word": "replete",
-			"definition": "full",
+			"word": "concede",
+			"definition": "admit",
 			"definitionC": "",
 			"id":"14",
 			"star":"0"
 		},
 		{
-			"word": "enhance",
-			"definition": "improve",
+			"word": "explicate",
+			"definition": "explain",
 			"definitionC": "",
 			"id":"15",
 			"star":"0"
 		},
 		{
-			"word": "enigma",
-			"definition": "puzzle",
+			"word": "variance",
+			"definition": "difference",
 			"definitionC": "",
 			"id":"16",
 			"star":"0"
 		},
 		{
-			"word": "affable",
-			"definition": "friendly",
+			"word": "incompatible",
+			"definition": "unsuited",
 			"definitionC": "",
 			"id":"17",
 			"star":"0"
 		},
 		{
-			"word": "tardy",
-			"definition": "late",
+			"word": "incontrovertible",
+			"definition": "certain",
 			"definitionC": "",
 			"id":"18",
 			"star":"0"
 		},
 		{
-			"word": "reprehensible",
-			"definition": "shameful",
+			"word": "sanction",
+			"definition": "agree",
 			"definitionC": "",
 			"id":"19",
 			"star":"0"
 		},
 		{
-			"word": "obdurate",
-			"definition": "stubborn",
+			"word": "proposition",
+			"definition": "statement",
 			"definitionC": "",
 			"id":"20",
 			"star":"0"
