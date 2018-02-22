@@ -9,5 +9,13 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	$(".title").click(function(e){
+		$('this').accordion({
+          selector: {
+            trigger: '.title .icon'
+          }  
+         });
+})
+
 	// add any functionality and listeners you want here
 }
