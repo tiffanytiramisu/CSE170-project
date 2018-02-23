@@ -124,12 +124,13 @@
 				alert("CORRECT!");
 				console.log(counter);
 			});
+			$('#'+i+' #incorrect.button').click(function(){
+				alert("EMMM...INCORRECT");
+				$('#score').html(counter+"/20");
+			});
 		}
 		//error action when clicked on wrong option
-		$('#incorrect').click(function(){
-			alert("EMMM...INCORRECT");
-			$('#score').html(counter+"/20");
-		});
+
 	</script>
   </body>
 </html>
