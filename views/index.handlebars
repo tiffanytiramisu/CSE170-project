@@ -32,6 +32,12 @@
 	          <div class="header">Star List</div>
 	        </div>
 	      </div>
+	      <div class="item">
+	      	<p class="facebookLogin">
+				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+				</fb:login-button>
+			</p>
+	      </div>
 	      <div class="item">Log out</div>
 	    </div>
 	  </div>
@@ -41,12 +47,6 @@
 	  <a class="item" href=reminder>
 	    Study Reminder
 	  </a>
-	  <a class="item">
-	  		<p class="facebookLogin">
-				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-				</fb:login-button>
-			</p>
-		</a>
 	</div>
 
 	<div class="ui center aligned one column grid">
