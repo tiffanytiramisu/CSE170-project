@@ -15,6 +15,7 @@ var study = require('./routes/study');
 var manage = require('./routes/manage');
 var tutorial = require('./routes/tutorial');
 var reminder = require('./routes/reminder');
+var lists = require('./routes/lists');
 // Example route
 // var user = require('./routes/user');
 
@@ -48,6 +49,7 @@ app.get('/study',study.view);
 app.get('/manage',manage.view);
 app.get('/tutorial',tutorial.view);
 app.get('/reminder',reminder.view);
+app.get('/lists/:id',lists.listInfo);
 
 // Example route
 // app.get('/users', user.list);
