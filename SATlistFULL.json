@@ -69,6 +69,76 @@
 			"definitionC": "",
 			"id":"10",
 			"star":"0"
+		},
+		{
+			"word": "knotty",
+			"definition": "complex",
+			"definitionC": "",
+			"id":"11",
+			"star":"0"
+		},
+		{
+			"word": "renown",
+			"definition": "fame",
+			"definitionC": "",
+			"id":"12",
+			"star":"0"
+		},
+		{
+			"word": "abasement",
+			"definition": "humiliation",
+			"definitionC": "",
+			"id":"13",
+			"star":"0"
+		},
+		{
+			"word": "replete",
+			"definition": "full",
+			"definitionC": "",
+			"id":"14",
+			"star":"0"
+		},
+		{
+			"word": "enhance",
+			"definition": "improve",
+			"definitionC": "",
+			"id":"15",
+			"star":"0"
+		},
+		{
+			"word": "enigma",
+			"definition": "puzzle",
+			"definitionC": "",
+			"id":"16",
+			"star":"0"
+		},
+		{
+			"word": "affable",
+			"definition": "friendly",
+			"definitionC": "",
+			"id":"17",
+			"star":"0"
+		},
+		{
+			"word": "tardy",
+			"definition": "late",
+			"definitionC": "",
+			"id":"18",
+			"star":"0"
+		},
+		{
+			"word": "reprehensible",
+			"definition": "shameful",
+			"definitionC": "",
+			"id":"19",
+			"star":"0"
+		},
+		{
+			"word": "obdurate",
+			"definition": "stubborn",
+			"definitionC": "",
+			"id":"20",
+			"star":"0"
 		}
 	],
 	"WrongVocabs": [
