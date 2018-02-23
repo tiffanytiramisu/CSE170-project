@@ -1,145 +1,145 @@
 {
-	"MCATvocabs": [
+	"LSATvocabs": [
 		{
-			"word": "aback",
-			"definition": "unexpected",
+			"word": "infer",
+			"definition": "deduce",
 			"definitionC": "",
 			"id":"1",
 			"star":"0"
 		},
 		{
-			"word": "abase",
-			"definition": "degrade",
+			"word": "undermines",
+			"definition": "weakens",
 			"definitionC": "",
 			"id":"2",
 			"star":"0"
 		},
 		{
-			"word": "abet",
-			"definition": "aid",
+			"word": "framework",
+			"definition": "structure",
 			"definitionC": "",
 			"id":"3",
 			"star":"0"
 		},
 		{
-			"word": "wretched",
-			"definition": "miserable",
+			"word": "invariably",
+			"definition": "always",
 			"definitionC": "",
 			"id":"4",
 			"star":"0"
 		},
 		{
-			"word": "addle",
-			"definition": "confuse",
+			"word": "indigenous",
+			"definition": "native",
 			"definitionC": "",
 			"id":"5",
 			"star":"0"
 		},
 		{
-			"word": "renounce",
-			"definition": "give up",
+			"word": "anomalous",
+			"definition": "irregular",
 			"definitionC": "",
 			"id":"6",
 			"star":"0"
 		},
 		{
-			"word": "tribute",
-			"definition": "praise",
+			"word": "alleviate",
+			"definition": "better",
 			"definitionC": "",
 			"id":"7",
 			"star":"0"
 		},
 		{
-			"word": "concrete",
-			"definition": "tangible",
+			"word": "ephemeral",
+			"definition": "fleeting",
 			"definitionC": "",
 			"id":"8",
 			"star":"0"
 		},
 		{
-			"word": "chasm",
-			"definition": "hole",
+			"word": "corroborate",
+			"definition": "confirm",
 			"definitionC": "",
 			"id":"9",
 			"star":"0"
 		},
 		{
-			"word": "mitigate",
-			"definition": "assuage",
+			"word": "implicit",
+			"definition": "implied",
 			"definitionC": "",
 			"id":"10",
 			"star":"0"
 		},
 		{
-			"word": "derision",
-			"definition": "ridicule",
+			"word": "feign",
+			"definition": "pretend",
 			"definitionC": "",
 			"id":"11",
 			"star":"0"
 		},
 		{
-			"word": "interpose",
-			"definition": "interrupt",
+			"word": "equivocation",
+			"definition": "ambiguity",
 			"definitionC": "",
 			"id":"12",
 			"star":"0"
 		},
 		{
-			"word": "spurious",
-			"definition": "false",
+			"word": "evaluate",
+			"definition": "judge",
 			"definitionC": "",
 			"id":"13",
 			"star":"0"
 		},
 		{
-			"word": "bilk",
-			"definition": "cheat",
+			"word": "concede",
+			"definition": "admit",
 			"definitionC": "",
 			"id":"14",
 			"star":"0"
 		},
 		{
-			"word": "levity",
-			"definition": "casual",
+			"word": "explicate",
+			"definition": "explain",
 			"definitionC": "",
 			"id":"15",
 			"star":"0"
 		},
 		{
-			"word": "castigate",
-			"definition": "reprimand",
+			"word": "variance",
+			"definition": "difference",
 			"definitionC": "",
 			"id":"16",
 			"star":"0"
 		},
 		{
-			"word": "mendacious",
-			"definition": "dishonest",
+			"word": "incompatible",
+			"definition": "unsuited",
 			"definitionC": "",
 			"id":"17",
 			"star":"0"
 		},
 		{
-			"word": "blithe",
-			"definition": "happy",
+			"word": "incontrovertible",
+			"definition": "certain",
 			"definitionC": "",
 			"id":"18",
 			"star":"0"
 		},
 		{
-			"word": "billow",
-			"definition": "surging",
+			"word": "sanction",
+			"definition": "agree",
 			"definitionC": "",
 			"id":"19",
 			"star":"0"
 		},
 		{
-			"word": "wry",
-			"definition": "mocking",
+			"word": "proposition",
+			"definition": "statement",
 			"definitionC": "",
 			"id":"20",
 			"star":"0"
-		},
+		}
 	],
 	"WrongVocabs": [
 		{

@@ -32,11 +32,17 @@
 	          <div class="header">Star List</div>
 	        </div>
 	      </div>
+	      <div class="item">
+	      	<p class="facebookLogin">
+				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+				</fb:login-button>
+			</p>
+	      </div>
 	      <div class="item">Log out</div>
 	    </div>
 	  </div>
 	  <a class="item" href=tutorial>
-	    Tutorial
+	    HELP
 	  </a>
 	  <a class="item" href=reminder>
 	    Study Reminder
@@ -115,8 +121,12 @@
 		var login_status = false;
 		$('.ui.pointing.dropdown.link.item').dropdown();
 		//login
-		$('.ui.modal').modal('setting', 'closable', false).modal('show');
+		$('.ui.modal').modal('setting', 'closable', false).modal('false');
 	</script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	{{> facebook}}
+	<script src="/js/facebook.js"></script>
 
 </body>
 </html>

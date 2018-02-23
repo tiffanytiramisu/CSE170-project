@@ -14,7 +14,7 @@
 	    Home
 	  </a>
 	  <div class="ui pointing dropdown link item">
-	    <span class="text">Account</span>
+	    <span class="text" id="username">Guest</span>
 	    <i class="dropdown icon"></i>
 	    <div class="menu">
 	      <div class="item">
@@ -34,42 +34,22 @@
 	    </div>
 	  </div>
 	  <a class="item" href=tutorial>
-	    Tutorial
+	    HELP
 	  </a>
 	  <a class="item" href=reminder>
 	    Study Reminder
 	  </a>
 	</div>
 
-<!-- 	<div class="multiple modal">
-	{{#each SATvocabs}}
-		<div class="modal" id={{id}}>
-  			<div class="header">Question {{id}}</div>
-  			<div class="content">
-    			<h1>Select meaning of word: {{word}}</h1>
-  			</div>
-  			<button class="ui button">next</button>
-		</div>
-	{{/each}}
-	
-
-		<div class="modal" id=0>
-  			<div class="header">Study Session Completed!</div>
-  			<div class="content">
-    			<h1>Your Score: </h1>
-  			</div>
-  			<button class="ui button">next</button>
-		</div>
-
-	</div> -->
 	<div class="ui modal" id=0>
-	  <i class="close icon"></i>
 	  <div class="header">
 	    Study Session Complete
 	  </div>
 	  <div class="image content">
 	    <div class="description">
-	    <p>You just complete your study session, your score is <h3>6/6</h3></p>     
+	    <p>You just complete your study session, your score is 
+	    	<h3 id='score'></h3>
+	    </p>     
 	    </div>
 	  </div>
 	  <div class="actions">
@@ -90,51 +70,35 @@
 
 	{{#each SATvocabs}}
 	<div class="ui modal" id={{id}}>
-	  <i class="close icon"></i>
 	  <div class="header">
-	    {{id}} questions left:
+	    questions {{id}}:
 	  </div>
 	  <div class="image content">
 	    <div class="description">
-	    <p>Choose the correct definition of the word: <h3>{{word}}</h3></p>
+	    	<p>Choose the correct definition of the word: <h3>{{word}}</h3></p>
 			<div class="ui form">
 			  <div class="grouped fields">
-			    <label for="fruit">Select your answer:</label>
-			    <div class="field">
-			      <div class="ui radio checkbox">
-			        <input type="radio" name="fruit" checked="" tabindex="0" class="hidden">
-			        <label>{{definition}}</label>
-			      </div>
-			    </div>
-			    <div class="field">
-			      <div class="ui radio checkbox">
-			        <input type="radio" name="fruit" tabindex="0" class="hidden">
-			        <label>Oranges</label>
-			      </div>
-			    </div>
-			    <div class="field">
-			      <div class="ui radio checkbox">
-			        <input type="radio" name="fruit" tabindex="0" class="hidden">
-			        <label>Pears</label>
-			      </div>
-			    </div>
-			    <div class="field">
-			      <div class="ui radio checkbox">
-			        <input type="radio" name="fruit" tabindex="0" class="hidden">
-			        <label>Grapefruit</label>
-			      </div>
-			    </div>
+			  	<label>Select your answer:</label>
 			  </div>
 			</div>
 	    </div>
 	  </div>
-	  <div class="actions">
-	    <div class="ui black deny button">
-	      Nope
-	    </div>
-	    <div class="ui positive right labeled icon button">
-	      Next
-	      <i class="checkmark icon"></i>
+	  <div class="actions" id="shuffle">
+			<div class="ui fluid black deny button" id="correct" style="width:200px">
+  				{{definition}}
+			</div>
+			<div class="ui fluid black deny button" id="incorrect1-{{id}}"" style="width:200px">
+  				Orange
+			</div>
+			<div class="ui fluid black deny button" id="incorrect2-{{id}}" style="width:200px">
+  				Beautiful
+			</div>
+			<div class="ui fluid black deny button" id="incorrect3-{{id}}" style="width:200px">
+  				Sad
+			</div>
+	    <!-- <div class="ui positive right labeled icon button" id="nextButton">
+	      Skip
+	      <i class="checkmark icon"></i> -->
 	    </div>
 	  </div>
 	</div>
@@ -144,12 +108,60 @@
 
 
 	<script type="text/javascript">
+		//shuffle algorithm
+		$.fn.shuffleChildren = function() {
+		    $.each(this.get(), function(index, el) {
+		        var $el = $(el);
+		        var $find = $el.children();
+
+		        $find.sort(function() {
+		            return 0.5 - Math.random();
+		        });
+
+		        $el.empty();
+		        $find.appendTo($el);
+		    });
+		};
+
+		$('.modal>#shuffle').shuffleChildren();
 		//drop down animation in menu
 		$('.ui.pointing.dropdown.link.item').dropdown();
-		//radio check box for quiz choices
-		$('.ui.radio.checkbox').checkbox();
 		//animation for quiz slides
 		$('.ui.modal').modal('setting', 'closable', false).modal('show');
+		//parse JSON
+		var jasonobj;
+		$.get("https://a7-vocabuddy.herokuapp.com/lists/SAT", function(result){
+			console.log(result["ListData"][0]);
+			jasonobj = result["WrongVocabs"];
+			//rendering worng options
+			var wrongsize = result["ListData"][1]["wrongsize"];
+			var listsize = result["ListData"][0]["size"];
+			console.log(wrongsize);
+			console.log(listsize);
+			for(var j=1; j<=listsize; j++){
+				for (var k=1; k<=3; k++){
+					$('.black.deny.button#incorrect'+k+"-"+j)
+					.html(result["WrongVocabs"][Math.floor(Math.random()*10%wrongsize)]["word"]);
+				}
+			}
+		});
+		var counter = 0;
+		var i = 0;
+
+		//counter action when clicked on correct answer
+		for(i=1; i<=20; i++){
+			$('#'+i+' #correct.button').click(function(){
+				counter = counter+1;
+				$('#score').html(counter+"/20");
+				alert("CORRECT!");
+				console.log(counter);
+			});
+			$('#'+i+' '+'[id^=incorrect]'+'.button').click(function(){
+				alert("EMMM...INCORRECT");
+				$('#score').html(counter+"/20");
+			});
+		}
+
 	</script>
   </body>
 </html>

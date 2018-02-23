@@ -39,14 +39,14 @@
 	    </div>
 	  </div>
 	  <a class="item" href=tutorial>
-	    Tutorial
+	    HELP
 	  </a>
 	  <a class="item" href=reminder>
 	    Study Reminder
 	  </a>
 	</div>
 
-  <div class="ui accordion">
+  <div class="ui styled accordion">
   <div class="title">
     <i class="dropdown icon"></i>
     What is the star icon for?
@@ -130,6 +130,14 @@ How do I know if the reminder has been saved?
 	<script type="text/javascript">
 		var login_status = false;
 		$('.ui.pointing.dropdown.link.item').dropdown();
+    //accordian JS
+    $('.accordion')
+      .accordion({
+        selector: {
+          trigger: '.title'
+        }
+      })
+    ;
 	</script>
 
 </body>

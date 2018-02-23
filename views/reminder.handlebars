@@ -36,7 +36,7 @@
 	    </div>
 	  </div>
 	  <a class="item" href=tutorial>
-	    Tutorial
+	    HELP
 	  </a>
 	  <a class="item" href=reminder>
 	    Study Reminder
@@ -164,7 +164,7 @@
 	  <tfoot>
 	    <tr>
 	    	<td>
-	    	<button class="ui toggle button">Save</button>
+	    	<button class="ui button">Save</button>
 	    </td>
 	  </tr></tfoot>
 	</table>
@@ -227,7 +227,10 @@
 		  })
 		;
 		//save button
-		$('.ui.toggle.button').state();
+		$('.ui.button').click(function(){
+			alert("saved");
+			location.href = "/";
+		});
 	</script>
 
 </body>
