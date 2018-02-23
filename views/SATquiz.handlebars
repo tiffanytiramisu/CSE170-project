@@ -83,22 +83,22 @@
 			</div>
 	    </div>
 	  </div>
-	  <div class="actions">
+	  <div class="actions" id="shuffle">
 			<div class="ui fluid black deny button" id="correct" style="width:200px">
   				{{definition}}
-			</div><br />
-			<div class="ui fluid black deny button" id="incorrect" style="width:200px">
+			</div>
+			<div class="ui fluid black deny button" id="incorrect1-{{id}}"" style="width:200px">
   				Orange
-			</div><br />
-			<div class="ui fluid black deny button" id="incorrect" style="width:200px">
+			</div>
+			<div class="ui fluid black deny button" id="incorrect2-{{id}}" style="width:200px">
   				Beautiful
-			</div><br />
-			<div class="ui fluid black deny button" id="incorrect" style="width:200px">
+			</div>
+			<div class="ui fluid black deny button" id="incorrect3-{{id}}" style="width:200px">
   				Sad
-			</div><br />
-	    <div class="ui positive right labeled icon button" id="nextButton">
+			</div>
+	    <!-- <div class="ui positive right labeled icon button" id="nextButton">
 	      Skip
-	      <i class="checkmark icon"></i>
+	      <i class="checkmark icon"></i> -->
 	    </div>
 	  </div>
 	</div>
@@ -108,14 +108,46 @@
 
 
 	<script type="text/javascript">
+		//shuffle algorithm
+		$.fn.shuffleChildren = function() {
+		    $.each(this.get(), function(index, el) {
+		        var $el = $(el);
+		        var $find = $el.children();
+
+		        $find.sort(function() {
+		            return 0.5 - Math.random();
+		        });
+
+		        $el.empty();
+		        $find.appendTo($el);
+		    });
+		};
+
+		$('.modal>#shuffle').shuffleChildren();
 		//drop down animation in menu
 		$('.ui.pointing.dropdown.link.item').dropdown();
 		//animation for quiz slides
 		$('.ui.modal').modal('setting', 'closable', false).modal('show');
 		//parse JSON
-		var jasonobj = $.get("http://localhost:3000/lists/SAT");
+		var jasonobj;
+		$.get("http://localhost:3000/lists/SAT", function(result){
+			console.log(result["ListData"][0]);
+			jasonobj = result["WrongVocabs"];
+			//rendering worng options
+			var wrongsize = result["ListData"][1]["wrongsize"];
+			var listsize = result["ListData"][0]["size"];
+			console.log(wrongsize);
+			console.log(listsize);
+			for(var j=1; j<=listsize; j++){
+				for (var k=1; k<=3; k++){
+					$('.black.deny.button#incorrect'+k+"-"+j)
+					.html(result["WrongVocabs"][Math.floor(Math.random()*10%wrongsize)]["word"]);
+				}
+			}
+		});
 		var counter = 0;
 		var i = 0;
+
 		//counter action when clicked on correct answer
 		for(i=1; i<=20; i++){
 			$('#'+i+' #correct.button').click(function(){
@@ -124,16 +156,11 @@
 				alert("CORRECT!");
 				console.log(counter);
 			});
-			$('#'+i+' #incorrect.button').click(function(){
+			$('#'+i+' '+'[id^=incorrect]'+'.button').click(function(){
 				alert("EMMM...INCORRECT");
 				$('#score').html(counter+"/20");
 			});
 		}
-		//shuffle algorithm
-		// var ul = document.querySelector('ul');
-		// for (var i = ul.children.length; i >= 0; i--) {
-		//     ul.appendChild(ul.children[Math.random() * i | 0]);
-		// }
 
 	</script>
   </body>
