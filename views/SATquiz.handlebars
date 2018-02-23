@@ -130,7 +130,7 @@
 		$('.ui.modal').modal('setting', 'closable', false).modal('show');
 		//parse JSON
 		var jasonobj;
-		$.get("http://localhost:3000/lists/SAT", function(result){
+		$.get("https://a7-vocabuddy.herokuapp.com/lists/SAT", function(result){
 			console.log(result["ListData"][0]);
 			jasonobj = result["WrongVocabs"];
 			//rendering worng options
