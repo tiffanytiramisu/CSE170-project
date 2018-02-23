@@ -49,3 +49,15 @@ function callBackFn(result){
 // $.get("http://URL", callBackFn)
 
 // $.post("http://URL", {"json":"json"}, callBackFn)
+=======
+	$(".title").click(function(e){
+		$('this').accordion({
+          selector: {
+            trigger: '.title .icon'
+          }  
+         });
+})
+
+	// add any functionality and listeners you want here
+}
+
